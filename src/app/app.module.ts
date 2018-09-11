@@ -13,6 +13,8 @@ import { JobScheduleComponent } from './job-schedule/job-schedule.component';
 import { GroupMigrationComponent } from './group-migration/group-migration.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ChangePasswordGuard } from './guard/change-password-guard';
+import { OnHoldGuard } from './guard/on-hold-guard';
+import { LoginGuard } from './guard/login-guard';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,7 @@ import { ChangePasswordGuard } from './guard/change-password-guard';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [ChangePasswordGuard],
+  providers: [ChangePasswordGuard, OnHoldGuard, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
