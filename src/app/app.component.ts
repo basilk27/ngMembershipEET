@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  loginFlag: boolean;
   title = 'app';
+
+
+  constructor() {
+    this.loginFlag = true;
+  }
+
+  loginAction(): void {
+    this.loginFlag = false;
+  }
 }
